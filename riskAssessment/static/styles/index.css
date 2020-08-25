@@ -1,0 +1,88 @@
+#container {
+    background: var(--color-background);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container .top-message {
+    width: 90vw;
+    max-width: 700px;
+    text-align: center;
+}
+
+#container .top-message h1 {
+    font: 700 3.0rem Roboto;
+    color: var(--color-text-title);
+}
+
+#container .top-message h2 {
+    margin-top: 10px;
+    font: 700 2.4rem Roboto;
+    color: var(--color-text-title);
+}
+
+#container .entire-form {
+    margin-top: 20px;
+    font: 400 1.6rem Roboto;
+    color: var(--color-text-title);
+}
+
+#container .entire-form .input-block,
+#container .entire-form .select-block,
+#container .entire-form .house-block,
+#container .entire-form .vehicle-block,
+#container .entire-form .risk-questions-block {
+    margin-top: 5px;
+    font: 400 1.6rem Roboto;
+}
+
+#container .entire-form .house-block,
+#container .entire-form .vehicle-block,
+#container .entire-form .risk-questions-block {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#container .entire-form .input-block input,
+#container .entire-form .select-block select,
+#container .entire-form .house-block select,
+#container .entire-form .vehicle-block select,
+#container .entire-form .vehicle-block input,
+#container .entire-form .risk-questions-block select {
+    height: 2.2rem;
+    width: 100%;
+    border: 1px solid var(--color-text-complement);
+    border-radius: .3rem;
+    padding-left: .2rem;
+}
+
+#container .entire-form .sendButton {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container .entire-form button {
+    width: 8.0rem;
+    height: 4.0rem;
+
+    background: var(--color-primary);
+    color: var(--color-button-text);
+
+    font: 700 1.6rem Roboto;
+
+    border: 0;
+    border-radius: .8rem;
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+#container .entire-form button:hover {
+    background: var(--color-primary-darker);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origin - Risk Assessment</title>
+
+    {% load static %}
+    <link rel="shortcut icon" href="{% static "img/origin-favicon.svg" %}" type="image/svg">
+
+    <link rel="stylesheet" href="{% static "styles/main.css" %}">
+    <link rel="stylesheet" href="{% static "styles/index.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="top-message">
+            <h1>Risk Assessment</h1>
+            <h2>Please answer all questions below:</h2>
+        </div>
+        <div class="entire-form">
+            <form action="" id="risk-assessment" method="post">
+                {% csrf_token %}
+                <div class="input-block">
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="age">
+                </div>
+                <div class="input-block">
+                    <label for="dependents">Dependents:</label>
+                    <input type="number" name="dependents" id="dependents">
+                </div>
+                <div class="input-block">
+                    <label for="income">Income:</label>
+                    <input type="number" name="income" id="income">
+                </div>
+                <div class="select-block">
+                    <label for="marital_status">Marital status:</label>
+                    <select name="marital_status" id="marital_status">
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                    </select>
+                </div>
+                <div class="house-block">
+                    <label for="house">Do you have a house?</label>
+                    <select name="house" id="house">
+                        <option value="yes">Yes</option>
+                        <option value="no" selected>No</option>
+                    </select>
+                    <label for="ownership_status" id="ownership_status-question">If yes, what's the status of your house?</label>
+                    <select name="ownership_status" id="ownership_status">
+                        <option value="owned" selected>Owned</option>
+                        <option value="mortgaged">Mortgaged</option>
+                    </select>
+                </div>
+                <div class="vehicle-block">
+                    <label for="vehicle" id="vehicle-question">Do you have a vehicle?</label>
+                    <select name="vehicle" id="vehicle">
+                        <option value="yes">Yes</option>
+                        <option value="no" selected>No</option>
+                    </select>
+                    <label for="year" id="year-question">If yes, what's your vehicle's manufacturing year?</label>
+                    <input type="number" name="year" id="year">
+                </div>
+                <div class="risk-questions-block">
+                    <label for="risk-question1">Risk question 1?</label>
+                    <select name="risk-question1" id="risk-question1">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                    </select>
+                    <label for="risk-question2">Risk question 2?</label>
+                    <select name="risk-question2" id="risk-question2">
+                        <option value="0" selected>0</option>
+                        <option value="1" >1</option>
+                    </select>
+                    <label for="risk-question3">Risk question 3?</label>
+                    <select name="risk-question3" id="risk-question3">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </form>
+            <div class="sendButton">
+                <button type="submit" form="risk-assessment" id="submitForm">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static "scripts/checkFields.js" %}"></script>
+
+</body>
+
+</html>

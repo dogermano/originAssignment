@@ -1,0 +1,26 @@
+#container {
+    background: var(--color-background);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container .top-message {
+    width: 90vw;
+    max-width: 700px;
+    font: 700 3.0rem Roboto;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+#container .result {
+    margin-top: 50px;
+    font: 400 1.6rem Roboto;
+    color: var(--color-text-title);
+}
+
+#container .result h2 {
+    margin-top: 20px;
+}

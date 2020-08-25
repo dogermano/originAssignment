@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Origin - Risk Assessment</title>
+
+    {% load static %}
+    <link rel="shortcut icon" href="{% static "img/origin-favicon.svg" %}" type="image/svg">
+
+    <link rel="stylesheet" href="{% static "styles/main.css" %}">
+    <link rel="stylesheet" href="{% static "styles/result.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <dev id="container">
+        <dev class="top-message">
+            <strong>Thanks! According to your answers, your risk profile is the following:</strong>
+        </dev>
+        <dev class="result">
+            <h2>Auto: {{auto}}</h2>
+            <h2>Disability: {{disability}}</h2>
+            <h2>Home: {{home}}</h2>
+            <h2>Life: {{life}}</h2>
+        </dev>
+    </dev>
+    
+</body>
+</html>
